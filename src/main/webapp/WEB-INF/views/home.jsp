@@ -4,10 +4,22 @@
 
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Weather Forecast</title>
+    <style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Weather Forecast</title>
+        
+        h1{
+        		text-align:center;
+        }
+        
+        body{
+        		background-color:SlateBlue;
+        }
+        
+    </style>
+        
     </head>
-    <body>Weather Forecast for </h1>
-        <p>This is the homepage!</p>
-    </body>
+	<body>
+		<h1 style="text-align:center;color:white;">Weather Forecast for</h1>
+	</body>
 </html>
