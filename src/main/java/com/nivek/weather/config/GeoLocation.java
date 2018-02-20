@@ -17,5 +17,29 @@ public class GeoLocation {
 		return this.cityName;
 	}
 	
+	public String getLon()
+	{
+		return this.longitude;
+	}
+	
+	public String getLat()
+	{
+		return this.latitude;
+	}
+	
+	public String getStatusCode()
+	{
+		return this.statusCode;
+	}
+	
+	public String getIP()
+	{
+		return this.ipAddress;
+	}
+	
+	public String getTimeZone()
+	{
+		return this.timeZone;
+	}
 	
 }
