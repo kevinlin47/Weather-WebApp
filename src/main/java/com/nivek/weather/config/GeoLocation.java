@@ -2,19 +2,26 @@ package com.nivek.weather.config;
 
 public class GeoLocation {
 	
-	private String statusCode;
-	private String statusMessage;
-	private String ipAddress;
-	private String countryCode;
-	private String regionName;
-	private String cityName;
+	private String ip;
+	private String city;
+	private String region;
+	private String region_code;
+	private String country;
+	private String country_name;
+	private String continent_code;
+	private String postal;
 	private String latitude;
 	private String longitude;
-	private String timeZone;
+	private String timezone;
+	private String utc_offset;
+	private String country_calling;
+	private String currency;
+	private String asn;
+	private String org;
 	
-	public String getCityName()
+	public String getCity()
 	{
-		return this.cityName;
+		return this.city;
 	}
 	
 	public String getLon()
@@ -27,33 +34,68 @@ public class GeoLocation {
 		return this.latitude;
 	}
 	
-	public String getStatusCode()
-	{
-		return this.statusCode;
-	}
-	
 	public String getIP()
 	{
-		return this.ipAddress;
+		return this.ip;
+	}
+	
+	public String getRegion()
+	{
+		return this.region;
+	}
+	
+	public String getRegionCode()
+	{
+		return this.region_code;
+	}
+	
+	public String getCountry()
+	{
+		return this.country;
+	}
+	
+	public String getCountryName()
+	{
+		return this.country_name;
+	}
+	
+	public String getOrg()
+	{
+		return this.org;
+	}
+	
+	public String getAsn()
+	{
+		return this.asn;
+	}
+	
+	public String getContinentCode()
+	{
+		return this.continent_code;
+	}
+	
+	public String getPostal()
+	{
+		return this.postal;
 	}
 	
 	public String getTimeZone()
 	{
-		return this.timeZone;
+		return this.timezone;
 	}
 	
-	public String getCountryCode()
+	public String getUtcOffset()
 	{
-		return this.countryCode;
+		return this.utc_offset;
 	}
 	
-	public String getRegionName()
+	public String getCurrency()
 	{
-		return this.regionName;
+		return this.currency;
 	}
 	
-	public String getStatusMessage()
+	public String getCountryCalling()
 	{
-		return this.statusMessage;
+		return this.country_calling;
 	}
 }
