@@ -33,20 +33,25 @@ public class GeoLocation {
 	{
 		return this.latitude;
 	}
-
 	
-	public String getCountryCode()
+	public String getIP()
 	{
-		return this.countryCode;
+		return this.ip;
 	}
 	
-	public String getRegionName()
+	public String getRegion()
 	{
-		return this.regionName;
+		return this.region;
 	}
 	
-	public String getStatusMessage()
+	public String getRegionCode()
 	{
-		return this.statusMessage;
+		return this.region_code;
 	}
+	
+	public String getCountry()
+	{
+		return this.country;
+	}
+	
 }
