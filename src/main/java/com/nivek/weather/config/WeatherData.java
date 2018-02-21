@@ -26,6 +26,16 @@ public class WeatherData {
 		return this.coord;
 	}
 	
+	public Map<String,String> getMain()
+	{
+		return this.main;
+	}
+	
+	public Map<String,String> getSys()
+	{
+		return this.sys;
+	}
+	
 	public class Weather
 	{
 		Integer id;

@@ -5,7 +5,8 @@
 <%@page import="java.io.*" %>
 <%@page import="com.nivek.weather.config.GeoLocation" %>
 <%@page import="com.nivek.weather.config.WeatherData" %>
-<%@page import="java.util.*;" %>
+<%@page import="java.util.*" %>
+<%@page import="java.time.LocalDateTime" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -29,6 +30,13 @@
         		font-family: "Lucida Console", Arial, Monospace;
         }
         
+        p{
+        		text-align:center;
+        		color:white;
+        		font-family: "Courier New",Monospace;
+        		font-size: 1.875em;
+        }
+        
     </style>
         
     </head>
@@ -48,11 +56,14 @@
 			WeatherData.Weather myWeatherData[]=weatherData.getWeather();
 			String weatherDescription=myWeatherData[0].getDescription();
 			String weatherMain=myWeatherData[0].getMain();
+			String temperature=weatherData.getMain().get("temp");
+			
+			LocalDateTime ldt=LocalDateTime.now();
 			
 			
 		%>
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
-		<p><%=weatherMain %> <%=weatherDescription %></p>
+		<p><%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
 	</body>
 </html>
 
