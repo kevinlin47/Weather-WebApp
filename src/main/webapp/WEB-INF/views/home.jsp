@@ -32,10 +32,10 @@
     </head>
 	<body>
 		<%
-			URL myURL=new URL("http://api.ipinfodb.com/v3/ip-city/?key=f826aa7a37ddda8015e3a24b2d0c1c3908f7e750de1510d27b759cb6c5ca28a0&format=json");
+			URL myURL=new URL("https://ipapi.co/json/");
 			InputStreamReader reader=new InputStreamReader(myURL.openStream());
 			GeoLocation geoLocation=new Gson().fromJson(reader,GeoLocation.class);
-			String userLocation=geoLocation.getCityName();
+			String userLocation=geoLocation.getCity();
 			
 			String lat=geoLocation.getLat();
 			String lon=geoLocation.getLon();
@@ -45,10 +45,6 @@
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
 	</body>
 </html>
-
-<!-- GeoLocation api key -->
-<!-- f826aa7a37ddda8015e3a24b2d0c1c3908f7e750de1510d27b759cb6c5ca28a0 -->
-<!-- http://api.ipinfodb.com/v3/ip-city/?key=YOUR_API_KEY&ip=IP_V4_OR_IPV6_ADDRESS -->
 
 <!-- Weather api key -->
 <!-- 1abbdbc0bd449a1c5fe4f0c67a5681fb -->
