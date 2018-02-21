@@ -59,11 +59,13 @@
 			String temperature=weatherData.getMain().get("temp");
 			
 			LocalDateTime ldt=LocalDateTime.now();
+			String hour=Integer.toString(ldt.getHour());
+			String min=Integer.toString(ldt.getMinute());
 			
 			
 		%>
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
-		<p><%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
+		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
 	</body>
 </html>
 
