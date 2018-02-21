@@ -42,4 +42,18 @@ public class GeoLocation {
 		return this.timeZone;
 	}
 	
+	public String getCountryCode()
+	{
+		return this.countryCode;
+	}
+	
+	public String getRegionName()
+	{
+		return this.regionName;
+	}
+	
+	public String getStatusMessage()
+	{
+		return this.statusMessage;
+	}
 }
