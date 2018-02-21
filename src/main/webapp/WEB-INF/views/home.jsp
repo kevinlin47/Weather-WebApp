@@ -46,11 +46,13 @@
 			reader=new InputStreamReader(myURL.openStream());
 			WeatherData weatherData=new Gson().fromJson(reader,WeatherData.class);
 			WeatherData.Weather myWeatherData[]=weatherData.getWeather();
-			String weatherCondition=myWeatherData[0].getDescription();
+			String weatherDescription=myWeatherData[0].getDescription();
+			String weatherMain=myWeatherData[0].getMain();
+			
 			
 		%>
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
-		<p><%=weatherCondition %></p>
+		<p><%=weatherMain %> <%=weatherDescription %></p>
 	</body>
 </html>
 
