@@ -54,4 +54,14 @@ public class GeoLocation {
 		return this.country;
 	}
 	
+	public String getCountryName()
+	{
+		return this.country_name;
+	}
+	
+	public String getOrg()
+	{
+		return this.org;
+	}
+	
 }

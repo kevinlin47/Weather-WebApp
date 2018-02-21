@@ -4,6 +4,8 @@
 <%@page import="java.net.URL" %>
 <%@page import="java.io.*" %>
 <%@page import="com.nivek.weather.config.GeoLocation" %>
+<%@page import="com.nivek.weather.config.WeatherData" %>
+<%@page import="java.util.*;" %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
@@ -39,13 +41,20 @@
 			
 			String lat=geoLocation.getLat();
 			String lon=geoLocation.getLon();
-			/*myURL=new URL();*/
-			String weatherCondition;
+			
+			myURL=new URL("http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat="+lat+"&lon="+lon+"&units=imperial");
+			reader=new InputStreamReader(myURL.openStream());
+			WeatherData weatherData=new Gson().fromJson(reader,WeatherData.class);
+			WeatherData.Weather myWeatherData[]=weatherData.getWeather();
+			String weatherCondition=myWeatherData[0].getDescription();
+			
 		%>
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
+		<p><%=weatherCondition %></p>
 	</body>
 </html>
 
 <!-- Weather api key -->
 <!-- 1abbdbc0bd449a1c5fe4f0c67a5681fb -->
-<!-- api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon} -->
+<!-- http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat=40.4835&lon=-74.4432 -->
+<!-- http://openweathermap.org/img/w/10d.png -->
