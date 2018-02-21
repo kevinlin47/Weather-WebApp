@@ -1,8 +1,6 @@
 package com.nivek.weather.config;
 import java.util.*;
 
-import com.google.gson.Gson;
-
 public class WeatherData {
 
 	private Map<String,String> coord;
