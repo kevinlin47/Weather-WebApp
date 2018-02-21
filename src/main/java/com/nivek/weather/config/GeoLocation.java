@@ -64,4 +64,38 @@ public class GeoLocation {
 		return this.org;
 	}
 	
+	public String getAsn()
+	{
+		return this.asn;
+	}
+	
+	public String getContinentCode()
+	{
+		return this.continent_code;
+	}
+	
+	public String getPostal()
+	{
+		return this.postal;
+	}
+	
+	public String getTimeZone()
+	{
+		return this.timezone;
+	}
+	
+	public String getUtcOffset()
+	{
+		return this.utc_offset;
+	}
+	
+	public String getCurrency()
+	{
+		return this.currency;
+	}
+	
+	public String getCountryCalling()
+	{
+		return this.country_calling;
+	}
 }

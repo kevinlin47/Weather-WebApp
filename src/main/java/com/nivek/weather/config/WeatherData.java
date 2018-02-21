@@ -5,7 +5,7 @@ public class WeatherData {
 
 	private Map<String,String> coord;
 	private Map<String,String> sys;
-	private  Weather weather[];
+	private Weather weather[];
 	private Map<String,String> main;
 	private Map<String,Double>wind;
 	private Map<String,String>rain;
@@ -19,6 +19,11 @@ public class WeatherData {
 	public Weather[] getWeather()
 	{
 		return this.weather;
+	}
+	
+	public Map<String,String> getCoord()
+	{
+		return this.coord;
 	}
 	
 	public class Weather
