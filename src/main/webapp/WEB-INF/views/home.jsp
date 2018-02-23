@@ -8,11 +8,13 @@
 <%@page import="java.util.*" %>
 <%@page import="java.time.LocalDateTime" %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-
+<!DOCTYPE HTML >
+<!--  @import url(https://fonts.googleapis.com/css?family=Open+Sans);-->
 <html>
     <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
+  	rel="stylesheet"  type='text/css'>
     <style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Weather Forecast</title>
@@ -22,7 +24,6 @@
         		font-family: "Times New Roman", Times, serif;
         }
         
-        @import url(https://fonts.googleapis.com/css?family=Open+Sans);
         
         body{
         		background-color:SlateBlue;
@@ -110,7 +111,13 @@
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
 		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
 		
-		<div>
+		<div class="wrap">
+		 <div class="search">
+		 <input type="text" class="searchTerm" placeholder="Search for location">
+		 <button type="submit"class="searchButton">
+		 <i class="fa fa-search"></i>
+		 </button>
+		 </div>
 		</div>
 	</body>
 </html>
@@ -118,4 +125,5 @@
 <!-- Weather api key -->
 <!-- 1abbdbc0bd449a1c5fe4f0c67a5681fb -->
 <!-- http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat=40.4835&lon=-74.4432 -->
+<!-- http://api.openweathermap.org/data/2.5/weather?q=longbranch&APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&units=imperial -->
 <!-- http://openweathermap.org/img/w/10d.png -->
