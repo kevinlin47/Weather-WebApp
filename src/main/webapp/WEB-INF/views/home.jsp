@@ -101,14 +101,19 @@
 			String weatherDescription=myWeatherData[0].getDescription();
 			String weatherMain=myWeatherData[0].getMain();
 			String temperature=weatherData.getMain().get("temp");
+			String weatherIconID=myWeatherData[0].getIcon();
+			String weatherIconSrc="http://openweathermap.org/img/w/"+weatherIconID+".png";
 			
 			LocalDateTime ldt=LocalDateTime.now();
 			String hour=Integer.toString(ldt.getHour());
 			String min=Integer.toString(ldt.getMinute());
-			
-			
+
+				
 		%>
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
+		<p style="text-align:center;">
+		<img src=<%=weatherIconSrc%> alt="weather" style="width:200px;height:200px;">
+		</p>
 		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
 		
 		<div class="wrap">
