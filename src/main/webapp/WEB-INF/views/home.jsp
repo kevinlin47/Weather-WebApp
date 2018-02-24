@@ -115,14 +115,16 @@
 		</p>
 		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
 		
+		<form action="/CityWeather" method="post">
 		<div class="wrap">
 		 <div class="search">
-		 <input type="text" class="searchTerm" placeholder="Search for location">
-		 <button type="submit"class="searchButton">
+		 <input type="text" name="city" class="searchTerm" placeholder="Search for location">
+		 <button type="submit" class="searchButton">
 		 <i class="fa fa-search"></i>
 		 </button>
 		 </div>
 		</div>
+		</form>
 	</body>
 </html>
 
