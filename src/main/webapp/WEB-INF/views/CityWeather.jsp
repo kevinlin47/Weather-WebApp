@@ -85,16 +85,9 @@
     </head>
 	<body>
 		<%
-			URL myURL=new URL("https://ipapi.co/json/");
+			String cityName=request.getParameter("city");
+			URL myURL=new URL("http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&units=imperial");
 			InputStreamReader reader=new InputStreamReader(myURL.openStream());
-			GeoLocation geoLocation=new Gson().fromJson(reader,GeoLocation.class);
-			String userLocation=geoLocation.getCity();
-			
-			String lat=geoLocation.getLat();
-			String lon=geoLocation.getLon();
-			
-			myURL=new URL("http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat="+lat+"&lon="+lon+"&units=imperial");
-			reader=new InputStreamReader(myURL.openStream());
 			WeatherData weatherData=new Gson().fromJson(reader,WeatherData.class);
 			WeatherData.Weather myWeatherData[]=weatherData.getWeather();
 			String weatherDescription=myWeatherData[0].getDescription();
@@ -109,7 +102,7 @@
 
 				
 		%>
-		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
+		<h1 style="text-align:center;color:white;">Weather Forecast for <%=cityName %></h1>
 		<p style="text-align:center;">
 		<img src=<%=weatherIconSrc%> alt="weather" style="width:200px;height:200px;">
 		</p>
@@ -127,9 +120,3 @@
 		</form>
 	</body>
 </html>
-
-<!-- Weather api key -->
-<!-- 1abbdbc0bd449a1c5fe4f0c67a5681fb -->
-<!-- http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat=40.4835&lon=-74.4432 -->
-<!-- http://api.openweathermap.org/data/2.5/weather?q=longbranch&APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&units=imperial -->
-<!-- http://openweathermap.org/img/w/10d.png -->
