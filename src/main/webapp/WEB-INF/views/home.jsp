@@ -80,6 +80,13 @@
   			left: 50%;
   			transform: translate(-50%, -50%);
 		}
+		
+		.footer {
+    		padding: 20px;
+    		text-align: center;
+    		background: #ddd;
+    		margin-top: 20px;
+		}
     </style>
         
     </head>
@@ -125,7 +132,12 @@
 		 </div>
 		</div>
 		</form>
-		
+	
+	<div class=footer>
+	<h2>
+	Designed and coded by Kevin Lin
+	</h2>
+	</div>	
 	</body>
 </html>
 
