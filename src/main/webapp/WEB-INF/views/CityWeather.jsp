@@ -117,6 +117,12 @@
 		 </div>
 		</div>
 		</form> 
+		
+		<div>
+		<footer style="position:fixed; bottom:0px; width:100%; height:50px;">
+		<p style="text-align:left; font-size:1.0em; font-weight:bold;">Designed and coded by <span style="font-weight:bold; color:rgb(60, 179, 113);">Kevin Lin</span></p>
+		</footer>
+		</div>
 	</body>
 </html>
 
