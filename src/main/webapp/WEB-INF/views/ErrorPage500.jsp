@@ -1,4 +1,4 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" isErrorPage="true"%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="com.google.gson.GsonBuilder"%>
 <%@page import="java.net.URL" %>
@@ -119,5 +119,3 @@
 		</form> 
 	</body>
 </html>
-
-<!-- mtcHGngBLXi3zuk8DNdUWzR7vTsKnB -->
