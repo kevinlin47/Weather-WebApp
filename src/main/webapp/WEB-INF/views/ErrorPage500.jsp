@@ -84,10 +84,17 @@
         
     </head>
 	<body>
-		<%	
-			String cityName=request.getParameter("city");
-			URL myURL=new URL("http://api.openweathermap.org/data/2.5/weather?q="+cityName+"&APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&units=imperial");
+		<%
+			URL myURL=new URL("https://ipapi.co/json/");
 			InputStreamReader reader=new InputStreamReader(myURL.openStream());
+			GeoLocation geoLocation=new Gson().fromJson(reader,GeoLocation.class);
+			String userLocation=geoLocation.getCity();
+			
+			String lat=geoLocation.getLat();
+			String lon=geoLocation.getLon();
+			
+			myURL=new URL("http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat="+lat+"&lon="+lon+"&units=imperial");
+			reader=new InputStreamReader(myURL.openStream());
 			WeatherData weatherData=new Gson().fromJson(reader,WeatherData.class);
 			WeatherData.Weather myWeatherData[]=weatherData.getWeather();
 			String weatherDescription=myWeatherData[0].getDescription();
@@ -99,14 +106,15 @@
 			LocalDateTime ldt=LocalDateTime.now();
 			String hour=Integer.toString(ldt.getHour());
 			String min=Integer.toString(ldt.getMinute());
-					
-		%> 
-		<h1 style="text-align:center;color:white;">Weather Forecast for <%=cityName %></h1>
+
+				
+		%>
+		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
 		<p style="text-align:center;">
-	    <img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"> 
+		<img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;">
 		</p>
 		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
-		
+		<p style="text-align:center; color:red; font-weight:bold;">Entered City was not found</p>
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
 		 <div class="search">
@@ -116,6 +124,7 @@
 		 </button>
 		 </div>
 		</div>
-		</form> 
+		</form>
+		
 	</body>
 </html>
