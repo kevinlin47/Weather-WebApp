@@ -46,17 +46,17 @@
         
         .searchTerm{
         	 	float: left;
-  			width: 100%;
-  			border: 3px solid #00B4CC;
-  			padding: 5px;
-  			height: 20px;
-  			border-radius: 5px;
-  			outline: none;
-  			color: #9DBFAF;
+  				width: 100%;
+  				border: 3px solid #00B4CC;
+  				padding: 5px;
+  				height: 20px;
+  				border-radius: 5px;
+  				outline: none;
+  				color: #9DBFAF;
         }
         
         .searchTerm:focus{
-  			color: #00B4CC;
+  				color: #00B4CC;
 		}
 		
 		.searchButton {
@@ -81,12 +81,6 @@
   			transform: translate(-50%, -50%);
 		}
 		
-		.footer {
-    		padding: 20px;
-    		text-align: center;
-    		background: #ddd;
-    		margin-top: 20px;
-		}
     </style>
         
     </head>
@@ -132,12 +126,13 @@
 		 </div>
 		</div>
 		</form>
-	
-	<div class=footer>
-	<h2>
-	Designed and coded by Kevin Lin
-	</h2>
-	</div>	
+		
+		<div>
+		<footer style="position:fixed; bottom:0px; width:100%; height:50px;">
+		<p style="text-align:left; font-size:1.0em; font-weight:bold;">Designed and coded by <span style="font-weight:bold; color:rgb(60, 179, 113);">Kevin Lin</span></p>
+		</footer>
+		</div>
+		
 	</body>
 </html>
 
