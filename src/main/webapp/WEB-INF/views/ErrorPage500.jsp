@@ -39,6 +39,10 @@
         		font-size: 1.875em;
         }
         
+        a:hover{
+        		font-weight:bold;
+        }
+        
         .search{
         		width:100%;
         		position:relative;
@@ -111,7 +115,7 @@
 		%>
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=userLocation %></h1>
 		<p style="text-align:center;">
-		<img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;">
+		<a href="weather"><img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"></a>
 		</p>
 		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
 		<p style="text-align:center; color:red; font-weight:bold;">Entered City was not found</p>

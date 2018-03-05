@@ -39,6 +39,20 @@
         		font-size: 1.875em;
         }
         
+        a:link{
+        		color:white;
+        		text-decoration:none;
+        }
+        
+        a:visited{
+        		color:white;
+        		text-decoration:none;
+        }
+        
+        a:hover{
+        		font-weight:bold;
+        }
+        
         .search{
         		width:100%;
         		position:relative;
@@ -114,7 +128,7 @@
 		<p style="text-align:center;">
 		<img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;">
 		</p>
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>°F</p>
+		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%><a href=weather>°F</a></p>
 		
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
