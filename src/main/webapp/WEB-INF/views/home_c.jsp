@@ -108,7 +108,7 @@
 			String lat=geoLocation.getLat();
 			String lon=geoLocation.getLon();
 			
-			myURL=new URL("http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat="+lat+"&lon="+lon+"&units=imperial");
+			myURL=new URL("http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat="+lat+"&lon="+lon+"&units=metric");
 			reader=new InputStreamReader(myURL.openStream());
 			WeatherData weatherData=new Gson().fromJson(reader,WeatherData.class);
 			WeatherData.Weather myWeatherData[]=weatherData.getWeather();
@@ -128,7 +128,7 @@
 		<p style="text-align:center;">
 		<img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;">
 		</p>
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%><a href=weather_c>°F</a></p>
+		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%><a href=weather>°C</a></p>
 		
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
@@ -149,9 +149,3 @@
 		
 	</body>
 </html>
-
-<!-- Weather api key -->
-<!-- 1abbdbc0bd449a1c5fe4f0c67a5681fb -->
-<!-- http://api.openweathermap.org/data/2.5/weather?APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&lat=40.4835&lon=-74.4432 -->
-<!-- http://api.openweathermap.org/data/2.5/weather?q=longbranch&APPID=1abbdbc0bd449a1c5fe4f0c67a5681fb&units=imperial -->
-<!-- http://openweathermap.org/img/w/10d.png -->

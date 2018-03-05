@@ -18,6 +18,11 @@ public class HomeController {
 		return new ModelAndView("home");
 	}
 	
+	@RequestMapping(value="/weather_c",method=RequestMethod.GET)
+	public ModelAndView test_c(HttpServletResponse response) throws IOException{
+		return new ModelAndView("home_c");
+	}
+	
 	/*
 	@RequestMapping(value="/weather",method=RequestMethod.POST)
 	public ModelAndView getCitySearch(HttpServletResponse response,@RequestParam(value="city")String city) throws IOException
