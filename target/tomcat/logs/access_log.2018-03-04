@@ -112,3 +112,11 @@
 0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:02:06 -0500] "GET /weather HTTP/1.1" 200 3315 http-bio-8080-exec-3 290
 0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:03:29 -0500] "GET /weather HTTP/1.1" 200 3277 http-bio-8080-exec-7 274
 0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:03:33 -0500] "GET /weather HTTP/1.1" 200 3277 http-bio-8080-exec-7 224
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:13:38 -0500] "GET /weather HTTP/1.1" 200 3278 http-bio-8080-exec-2 369
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:14:04 -0500] "POST /CityWeather HTTP/1.1" 200 2971 http-bio-8080-exec-2 466
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:14:16 -0500] "GET /weather HTTP/1.1" 200 3278 http-bio-8080-exec-2 238
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:14:34 -0500] "POST /CityWeather HTTP/1.1" 200 2971 http-bio-8080-exec-2 23
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:14:40 -0500] "POST /CityWeather HTTP/1.1" 200 2971 http-bio-8080-exec-2 21
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:15:13 -0500] "POST /CityWeather HTTP/1.1" 200 2980 http-bio-8080-exec-2 137
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:15:26 -0500] "GET /weather HTTP/1.1" 200 3278 http-bio-8080-exec-2 246
+0:0:0:0:0:0:0:1 - - [04/Mar/2018:20:15:28 -0500] "GET /weather HTTP/1.1" 200 3278 http-bio-8080-exec-2 150
