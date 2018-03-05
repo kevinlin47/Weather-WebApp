@@ -21,6 +21,41 @@ public class WeatherData {
 		return this.weather;
 	}
 	
+	public Map<String,Double> getWind()
+	{
+		return this.wind;
+	}
+	
+	public Map<String,String> getRain()
+	{
+		return this.rain;
+	}
+	
+	public Map<String,String> getClouds()
+	{
+		return this.clouds;
+	}
+	
+	public String getDt()
+	{
+		return this.dt;
+	}
+	
+	public String getID()
+	{
+		return this.id;
+	}
+	
+	public String getName()
+	{
+		return this.name;
+	}
+	
+	public String getCod()
+	{
+		return this.cod;
+	}
+	
 	public Map<String,String> getCoord()
 	{
 		return this.coord;
