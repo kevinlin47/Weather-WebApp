@@ -23,13 +23,6 @@ public class HomeController {
 		return new ModelAndView("home_c");
 	}
 	
-	/*
-	@RequestMapping(value="/weather",method=RequestMethod.POST)
-	public ModelAndView getCitySearch(HttpServletResponse response,@RequestParam(value="city")String city) throws IOException
-	{	
-		return new ModelAndView("CityWeather");
-	}*/
-	
 	@RequestMapping(value="/CityWeather", method=RequestMethod.GET)
 	public ModelAndView displayCityWeather(HttpServletResponse response) throws IOException
 	{
@@ -46,6 +39,12 @@ public class HomeController {
 	public ModelAndView displayCityWeather(HttpServletResponse response,@RequestParam(value="city")String city) throws IOException
 	{
 		return new ModelAndView("CityWeather");
+	}
+	
+	@RequestMapping(value="/CityWeather_c", method=RequestMethod.POST)
+	public ModelAndView displayCityWeather_c(HttpServletResponse response,@RequestParam(value="city") String city) throws IOException
+	{
+		return new ModelAndView("CityWeather_c");
 	}
 
 }

@@ -119,7 +119,7 @@
 		<p style="text-align:center;">
 	    <a href="weather"><img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"></a> 
 		</p>
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%><a href=CityWeather>°F</a></p>
+		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%></p>
 		
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
