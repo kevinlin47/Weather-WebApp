@@ -94,6 +94,7 @@
   			left: 50%;
   			transform: translate(-50%, -50%);
 		}
+
     </style>
         
     </head>
@@ -119,7 +120,11 @@
 		<p style="text-align:center;">
 	    <a href="weather"><img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"></a> 
 		</p>
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%><a href=CityWeather_c>°F</a></p>
+		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%></p>
+		<form action="/CityWeather_c" method="post">
+		<input type="hidden" name="city" value="<%=cityName%>">
+		<button style="backgroud-color:Transparent;" type="submit">°F</button>
+		</form>
 		
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
