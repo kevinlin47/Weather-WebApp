@@ -39,18 +39,18 @@
         		font-size: 1.875em;
         }
         
-        a:link{
-        		color:white;
-        		text-decoration:none;
+        .button{
+        		background-color:Transparent; 
+        		color:white; 
+        		font-size:1.00em; 
+        		font-family:"Courier New",Monospace ;
+        		border:none;
+        		
         }
         
-        a:visited{
-        		color:white;
-        		text-decoration:none;
-        }
-        
-        a:hover{
-        		font-weight:bold;
+        .button:Hover{
+				font-weight:bold;
+				cursor:pointer;
         }
         
         .search{
@@ -120,10 +120,10 @@
 		<p style="text-align:center;">
 	    <a href="weather"><img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"></a> 
 		</p>
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%></p>
 		<form action="/CityWeather_c" method="post">
 		<input type="hidden" name="city" value="<%=cityName%>">
-		<button style="backgroud-color:Transparent;" type="submit">°F</button>
+		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
+		<button class="button">°F</button></p>
 		</form>
 		
 		<form action="/CityWeather" method="post">
