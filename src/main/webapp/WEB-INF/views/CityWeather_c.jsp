@@ -119,10 +119,13 @@
 		<p style="text-align:center;">
 	    <a href="weather"><img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"></a> 
 		</p>
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
-		<a href=CityWeather>°C</a></p>
+		<form action="/CityWeather" method="post">
+		<%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
+		<button type="submit">°C</button>
+		</form>
 		
 		
+		<!-- <a href=CityWeather>°C</a> -->
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
 		 <div class="search">
