@@ -101,6 +101,19 @@
         	font-family: "Courier New",Monospace;
         	font-size: 1.875em;
 		}
+		
+		.cButton{
+			text-align:center;
+        	color:white;
+        	font-family: "Courier New",Monospace;
+        	font-size: 1em;
+        	background-color:Transparent;
+        	border:none;
+		}
+		
+		button:hover{
+			font-weight:bold;
+		}
     </style>
         
     </head>
@@ -129,8 +142,8 @@
 		<form action="/CityWeather" method="post">
 		<div class="format">
 		<%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
+		<button type="submit" class=cButton>°C</button>
 		</div>
-		<button type="submit">°C</button>
 		</form>
 		
 		
