@@ -94,6 +94,13 @@
   			left: 50%;
   			transform: translate(-50%, -50%);
 		}
+		
+		.format{
+			text-align:center;
+        	color:white;
+        	font-family: "Courier New",Monospace;
+        	font-size: 1.875em;
+		}
     </style>
         
     </head>
@@ -120,7 +127,9 @@
 	    <a href="weather"><img src=<%=weatherIconSrc%> alt="weather" style="width:100px;height:100px;"></a> 
 		</p>
 		<form action="/CityWeather" method="post">
+		<div class="format">
 		<%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
+		</div>
 		<button type="submit">°C</button>
 		</form>
 		
