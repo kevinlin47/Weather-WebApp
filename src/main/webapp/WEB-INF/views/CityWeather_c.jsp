@@ -146,8 +146,7 @@
 		</div>
 		</form>
 		
-		
-		<!-- <a href=CityWeather>°C</a> -->
+
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
 		 <div class="search">
