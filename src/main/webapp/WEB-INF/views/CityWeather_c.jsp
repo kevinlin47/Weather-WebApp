@@ -142,11 +142,12 @@
 		<form action="/CityWeather" method="post">
 		<div class="format">
 		<%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
+		<input type="hidden" name="city" value="<%=cityName%>">
 		<button type="submit" class=cButton>°C</button>
 		</div>
 		</form>
 		
-
+		
 		<form action="/CityWeather" method="post">
 		<div class="wrap">
 		 <div class="search">
