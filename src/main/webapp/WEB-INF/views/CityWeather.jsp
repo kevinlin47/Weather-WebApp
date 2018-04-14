@@ -111,6 +111,9 @@
 			String weatherIconID=myWeatherData[0].getIcon();
 			String weatherIconSrc="http://openweathermap.org/img/w/"+weatherIconID+".png";
 			
+			//City time api request
+			myURL=new URL("https://www.amdoren.com/api/timezone.php?api_key=mtcHGngBLXi3zuk8DNdUWzR7vTsKnB&loc="+cityName);
+			
 			LocalDateTime ldt=LocalDateTime.now();
 			String hour=Integer.toString(ldt.getHour());
 			String min=Integer.toString(ldt.getMinute());
