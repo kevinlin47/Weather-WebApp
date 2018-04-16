@@ -116,8 +116,6 @@
 			myURL=new URL("https://www.amdoren.com/api/timezone.php?api_key=mtcHGngBLXi3zuk8DNdUWzR7vTsKnB&loc="+cityName);
 			reader=new InputStreamReader(myURL.openStream());
 			LocalTime localTime=new Gson().fromJson(reader,LocalTime.class);
-			/*String time=localTime.getTime();
-			*/
 			
 			/*
 			LocalDateTime ldt=LocalDateTime.now();

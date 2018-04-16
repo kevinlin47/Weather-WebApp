@@ -2,14 +2,14 @@ package com.nivek.weather.config;
 
 public class LocalTime {
 	
-	private String error;
+	private Integer error;
 	private String error_message;
 	private String time;
 	private String timezone;
 	private String offset;
 	private String daylight_savings;
 	
-	public String getError()
+	public Integer getError()
 	{
 		return this.error;
 	}
