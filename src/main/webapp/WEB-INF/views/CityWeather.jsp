@@ -5,6 +5,7 @@
 <%@page import="java.io.*" %>
 <%@page import="com.nivek.weather.config.GeoLocation" %>
 <%@page import="com.nivek.weather.config.WeatherData" %>
+<%@page import="com.nivek.weather.config.LocalTime" %>
 <%@page import="java.util.*" %>
 <%@page import="java.time.LocalDateTime" %>
 
@@ -113,11 +114,15 @@
 			
 			//City time api request
 			myURL=new URL("https://www.amdoren.com/api/timezone.php?api_key=mtcHGngBLXi3zuk8DNdUWzR7vTsKnB&loc="+cityName);
+			reader=new InputStreamReader(myURL.openStream());
+			LocalTime localTime=new Gson().fromJson(reader,LocalTime.class);
+			String time=localTtime.getTime();
 			
+			/*
 			LocalDateTime ldt=LocalDateTime.now();
 			String hour=Integer.toString(ldt.getHour());
 			String min=Integer.toString(ldt.getMinute());
-					
+			*/		
 		%> 
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=cityName %></h1>
 		<p style="text-align:center;">
@@ -148,4 +153,5 @@
 	</body>
 </html>
 
+<!-- Time Zone API key -->
 <!-- mtcHGngBLXi3zuk8DNdUWzR7vTsKnB -->

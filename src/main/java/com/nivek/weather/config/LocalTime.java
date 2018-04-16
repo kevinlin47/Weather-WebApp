@@ -31,7 +31,7 @@ public class LocalTime {
 	
 	public String getOffSet()
 	{
-		return this.getOffSet();
+		return this.offSet;
 	}
 	
 	public String getDaylight_savings()
