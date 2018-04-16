@@ -37,8 +37,8 @@
 		<session-timeout>30</session-timeout>
 	</session-config>
 	
-	<error-page>
+	<!--  <error-page>
   		<error-code>500</error-code>
   		<location>/WEB-INF/views/ErrorPage500.jsp</location>
-	</error-page>
+	</error-page>-->
 </web-app>
