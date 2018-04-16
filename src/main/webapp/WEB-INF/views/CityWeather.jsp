@@ -116,7 +116,7 @@
 			myURL=new URL("https://www.amdoren.com/api/timezone.php?api_key=mtcHGngBLXi3zuk8DNdUWzR7vTsKnB&loc="+cityName);
 			reader=new InputStreamReader(myURL.openStream());
 			LocalTime localTime=new Gson().fromJson(reader,LocalTime.class);
-			String time=localTtime.getTime();
+			String time=localTime.getTime();
 			
 			/*
 			LocalDateTime ldt=LocalDateTime.now();
@@ -130,7 +130,7 @@
 		</p>
 		<form action="/CityWeather_c" method="post">
 		<input type="hidden" name="city" value="<%=cityName%>">
-		<p><%=hour+":"+min %> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
+		<p><%=time%> <%=weatherMain %>, <%=weatherDescription %> <%=temperature%>
 		<button class="button">°F</button></p>
 		</form>
 		
