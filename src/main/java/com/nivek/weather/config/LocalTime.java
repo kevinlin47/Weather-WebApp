@@ -24,5 +24,20 @@ public class LocalTime {
 		return this.time;
 	}
 	
+	public String getTimeZone()
+	{
+		return this.timeZone;
+	}
+	
+	public String getOffSet()
+	{
+		return this.getOffSet();
+	}
+	
+	public String getDaylight_savings()
+	{
+		return this.daylight_savings;
+	}
+	
 
 }
