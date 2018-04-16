@@ -5,8 +5,8 @@ public class LocalTime {
 	private String error;
 	private String error_message;
 	private String time;
-	private String timeZone;
-	private String offSet;
+	private String timezone;
+	private String offset;
 	private String daylight_savings;
 	
 	public String getError()
@@ -26,12 +26,12 @@ public class LocalTime {
 	
 	public String getTimeZone()
 	{
-		return this.timeZone;
+		return this.timezone;
 	}
 	
 	public String getOffSet()
 	{
-		return this.offSet;
+		return this.offset;
 	}
 	
 	public String getDaylight_savings()

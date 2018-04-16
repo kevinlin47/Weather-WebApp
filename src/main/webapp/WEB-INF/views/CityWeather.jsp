@@ -113,10 +113,10 @@
 			String weatherIconSrc="http://openweathermap.org/img/w/"+weatherIconID+".png";
 			
 			//City time api request
-			/*myURL=new URL("https://www.amdoren.com/api/timezone.php?api_key=mtcHGngBLXi3zuk8DNdUWzR7vTsKnB&loc="+cityName);
+			myURL=new URL("https://www.amdoren.com/api/timezone.php?api_key=mtcHGngBLXi3zuk8DNdUWzR7vTsKnB&loc="+cityName);
 			reader=new InputStreamReader(myURL.openStream());
 			LocalTime localTime=new Gson().fromJson(reader,LocalTime.class);
-			String time=localTime.getTime();
+			/*String time=localTime.getTime();
 			*/
 			
 			/*
