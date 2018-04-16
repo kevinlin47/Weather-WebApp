@@ -1,0 +1,17 @@
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:22:51 -0400] "GET /weather HTTP/1.1" 200 3275 http-bio-8080-exec-1 608
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:22:51 -0400] "GET /favicon.ico HTTP/1.1" 404 949 http-bio-8080-exec-3 12
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:22:58 -0400] "GET /weather_c HTTP/1.1" 200 2906 http-bio-8080-exec-4 265
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:22:59 -0400] "GET /weather HTTP/1.1" 200 3275 http-bio-8080-exec-5 224
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:23:04 -0400] "POST /CityWeather HTTP/1.1" 500 2805 http-bio-8080-exec-6 1045
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:23:10 -0400] "POST /CityWeather HTTP/1.1" 500 2805 http-bio-8080-exec-7 430
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:23:53 -0400] "POST /CityWeather HTTP/1.1" 500 2805 http-bio-8080-exec-8 585
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:23:54 -0400] "GET /weather HTTP/1.1" 200 3275 http-bio-8080-exec-9 128
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:27:55 -0400] "POST /CityWeather HTTP/1.1" 500 2805 http-bio-8080-exec-1 559
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:30:00 -0400] "GET /weather HTTP/1.1" 200 3275 http-bio-8080-exec-3 257
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:31:40 -0400] "POST /CityWeather HTTP/1.1" 200 3179 http-bio-8080-exec-5 66
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:32:44 -0400] "POST /CityWeather_c HTTP/1.1" 200 3491 http-bio-8080-exec-6 159
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:32:46 -0400] "POST /CityWeather HTTP/1.1" 200 3179 http-bio-8080-exec-6 11
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:32:46 -0400] "POST /CityWeather_c HTTP/1.1" 200 3491 http-bio-8080-exec-6 10
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:32:47 -0400] "POST /CityWeather HTTP/1.1" 200 3179 http-bio-8080-exec-6 11
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:32:48 -0400] "POST /CityWeather_c HTTP/1.1" 200 3491 http-bio-8080-exec-6 12
+0:0:0:0:0:0:0:1 - - [15/Apr/2018:21:32:50 -0400] "POST /CityWeather HTTP/1.1" 200 3179 http-bio-8080-exec-6 12
