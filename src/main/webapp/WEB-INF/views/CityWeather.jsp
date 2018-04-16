@@ -113,12 +113,7 @@
 			String weatherIconSrc="http://openweathermap.org/img/w/"+weatherIconID+".png";
 			
 			//City time api request
-			
-			/*
-			LocalDateTime ldt=LocalDateTime.now();
-			String hour=Integer.toString(ldt.getHour());
-			String min=Integer.toString(ldt.getMinute());
-			*/		
+					
 		%> 
 		<h1 style="text-align:center;color:white;">Weather Forecast for <%=cityName %></h1>
 		<p style="text-align:center;">
@@ -149,5 +144,4 @@
 	</body>
 </html>
 
-<!-- Time Zone API key -->
-<!-- mtcHGngBLXi3zuk8DNdUWzR7vTsKnB -->
+<!-- 51093633299f497a97733440181404 -->
